@@ -1,4 +1,4 @@
-cards = [9, 8, 7, 6, 5, 4, 3, 2, 1]
+# cards = [9, 8, 7, 6, 5, 4, 3, 2, 1]
 
 
 def locate_cards(cards, query):
@@ -15,7 +15,7 @@ def locate_cards(cards, query):
     return -1
 
 
-# Example usage
-query_number = 3
-result = locate_cards(cards, query_number)
-print(result)  # Output: 4 (index of the queried number in the cards list)
+cards = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+query = 10
+result = locate_cards(cards, query)
+print(result)
