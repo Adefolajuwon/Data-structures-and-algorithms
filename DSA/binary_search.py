@@ -1,7 +1,9 @@
-# cards = [9, 8, 7, 6, 5, 4, 3, 2, 1]
 
 
-def locate_cards(cards, query):
+from jovian.pythondsa import evaluate_test_case
+
+
+def locate_card(cards, query):
     lo, hi = 0, len(cards) - 1
     while lo <= hi:
         mid = (lo + hi) // 2
@@ -15,7 +17,12 @@ def locate_cards(cards, query):
     return -1
 
 
-cards = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-query = 10
-result = locate_cards(cards, query)
-print(result)
+test = {
+    'input': {
+        'cards': [10, 9, 8, 7, 6, 5, 4, 3, 2, 2, 1],
+        'query': 5
+    },
+    'output': 5
+}
+
+evaluate_test_case(locate_card, test)
