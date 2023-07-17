@@ -22,9 +22,14 @@ test = []
 test.append({
     'input': {
         'cards': [10, 9, 8, 7, 6, 5, 4, 3, 2, 2, 1],
-        'query': 5
-    },
-    'output': 5
+        'query': 10},
+    'output': 0
 })
-
+test.append({
+    'input': {
+        'cards': [8, 7, 6, 5, 4, 3, 2, 1],
+        'query': 8
+    },
+    'output': 0
+})
 evaluate_test_case(locate_card, test[0])
