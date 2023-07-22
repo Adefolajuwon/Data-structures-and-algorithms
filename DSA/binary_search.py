@@ -84,3 +84,18 @@ class Solution:
     def searchRange(self, nums: List[int], target: int) -> List[int]:
         return first_and_last_position(nums, target)
 # end
+
+
+# rotated list
+# nums = [6, 7, 8, 2, 3, 4, 5]
+
+
+# def binary_search(nums):
+#     lo = 0
+#     hi = len(nums)-1
+#     mid = (lo + hi) // 2
+#     mid_number = nums[mid]
+#     position = 1
+#     while position <= len(nums):
+#         if mid > 0 and mid_number < h1:
+#             r
