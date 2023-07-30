@@ -5,10 +5,11 @@ class TreeNode:
         self.right = None
 
 
-tree_tuple = ()
+tree_tuple = ((1, 3, None), 2, ((None, 3, 4), 5, (6, 7, 8)))
 
 
 def parse_tuple(data):
+    print(data)
     if isinstance(data, tuple) and len(data) == 3:
         node = TreeNode(data[1])
         node.left = parse_tuple(data[0])
