@@ -5,7 +5,7 @@ class TreeNode:
         self.right = None
 
 
-tree_tuple = ((1, 3, None), 2, ((None, 3, 4), 5, (6, 7, 8)))
+tree_tuple = ((1, 4, None), 2, ((None, 3, 4), 5, (6, 7, 8)))
 
 
 def parse_tuple(data):
