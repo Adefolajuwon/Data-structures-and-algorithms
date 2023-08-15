@@ -28,13 +28,16 @@ class LinkedList:
             self.head = Node(data, None)
             return
         itr = self.head
-        llstr = ''
-        while itr:
-            llstr += '-->' + str(itr.data)
+        # llstr = ''
+        while itr.next:
+            itr = itr.next
+        itr.next = Node(data, None)
 
 
 if __name__ == '__main__':
     li = LinkedList()
     li.insert_at_begining(5)
     li.insert_at_begining(85)
+    li.insert_at_end(56)
+
     li.print()
