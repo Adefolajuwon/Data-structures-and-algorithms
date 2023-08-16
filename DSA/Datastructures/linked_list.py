@@ -17,6 +17,7 @@ class LinkedList:
             print('Linked list is empty')
             return
         itr = self.head
+        print(itr)
         llstr = ''
         while itr:
             llstr += str(itr.data) + '-->'
@@ -75,6 +76,7 @@ class LinkedList:
 if __name__ == '__main__':
     li = LinkedList()
     li.insert_values(['banana', 'mango', 'grapes', 'orange'])
+    li.insert_at_begining(5)
     li.print()
     li.remove_by_value('orange')
     li.print()
