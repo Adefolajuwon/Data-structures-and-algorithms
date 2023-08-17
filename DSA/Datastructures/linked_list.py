@@ -84,3 +84,15 @@ if __name__ == '__main__':
     li.print()
     li.insert_after_value('mango', 'cherry')
     li.print()
+
+
+class Node:
+    def __init__(self, data=None, next=None, prev=None):
+        self.data = data
+        self.next = next
+        self.prev = prev
+
+
+class LinkedList:
+    def __init__(self):
+        self.head = None
