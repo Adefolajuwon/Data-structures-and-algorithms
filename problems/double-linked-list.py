@@ -26,7 +26,7 @@ class DoublyLinkedList:
             itr = itr.next
         print(llstr)
 
-    def print_back(self):
+    def print_backward(self):
         if self.tail is None:
             print('Empty')
             return
@@ -51,8 +51,10 @@ class DoublyLinkedList:
         last = self.get_last_node()
         last.self.next = Node(data, None, last)
 
-    def insert_values(self):
-        pass
+    def insert_values(self, data_list):
+        self.head = None
+        for data in data_list:
+            self.insert_at_end(data)
 
 
 if __name__ == '__main__':
@@ -60,4 +62,3 @@ if __name__ == '__main__':
     ll.insert_values(["banana", "mango", "grapes", "orange"])
     ll.print_forward()
     ll.print_backward()
-    ll.print_forward()
