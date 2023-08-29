@@ -44,8 +44,15 @@ class DoublyLinkedList:
             self.head = node
         else:
             node = Node(data, self.head, None)
+            self.head.prev = node
+            self.head = node
+
+    def insert_at_end(self, data):
+        last = self.get_last_node()
+        last.self.next = Node(data, None, last)
 
     def insert_values(self):
+        pass
 
 
 if __name__ == '__main__':
