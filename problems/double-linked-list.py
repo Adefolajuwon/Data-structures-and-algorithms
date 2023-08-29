@@ -5,19 +5,17 @@ class Node:
         self.prev = prev
 
 
-class LinkedList:
+class DoublyLinkedList:
     def __init__(self):
         self.head = None
-        self.tail = None
 
     def get_last_node(self):
         itr = self.head
         while itr:
             itr = itr.next
-        return
+        return itr
 
     def print_forward(self):
-
         if self.head is None:
             print('Empty')
             return
@@ -32,9 +30,27 @@ class LinkedList:
         if self.tail is None:
             print('Empty')
             return
-        itr = self.get_last_node()
+        lastNode = self.get_last_node()
+        itr = lastNode
         llstr = ''
         while itr:
             llstr += str(itr.data) + '-->'
             itr = itr.next
         print(llstr)
+
+    def insert_at_begining(self, data):
+        if self.head == None:
+            node = Node(data, self.head, None)
+            self.head = node
+        else:
+            node = Node(data, self.head, None)
+
+    def insert_values(self):
+
+
+if __name__ == '__main__':
+    ll = DoublyLinkedList()
+    ll.insert_values(["banana", "mango", "grapes", "orange"])
+    ll.print_forward()
+    ll.print_backward()
+    ll.print_forward()
