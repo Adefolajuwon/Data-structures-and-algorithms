@@ -28,7 +28,7 @@ class DoublyLinkedList:
 
     def print_backward(self):
         if self.tail is None:
-            print('Empty')
+            print('Emptyy')
             return
         lastNode = self.get_last_node()
         itr = lastNode
