@@ -17,7 +17,7 @@ class DoublyLinkedList:
 
     def print_forward(self):
         if self.head is None:
-            print('Empt\y')
+            print('Empty')
             return
         itr = self.head
         llstr = ''
