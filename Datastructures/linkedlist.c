@@ -33,3 +33,11 @@ void push(node_t *head, int val) {
   current->val = val;
   current->next->next = NULL;
 }
+
+void append(node_t *head, int val) {
+  node_t *new_node;
+  new_node = (node_t *)malloc(sizeof(node_t));
+  node_t->val = val;
+  new_node->next = *head;
+  *head = new_node;
+}
