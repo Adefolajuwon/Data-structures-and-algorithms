@@ -1,5 +1,6 @@
 #include <stdio.h>
 
+/**/
 int binary_search(int arr[], int length, int target) {
   int low = 0, high = length - 1;
 
@@ -8,15 +9,15 @@ int binary_search(int arr[], int length, int target) {
     int mid_element = arr[mid];
 
     if (mid_element == target) {
-      return mid; // Element found, return its index.
+      return mid;
     } else if (mid_element < target) {
-      low = mid + 1; // Discard the left half.
+      low = mid + 1;
     } else {
-      high = mid - 1; // Discard the right half.
+      high = mid - 1;
     }
   }
 
-  return -1; // Element not found.
+  return -1;
 }
 
 int main() {
